@@ -1,0 +1,24 @@
+{
+  "name": "Flutter LMS Sekolah",
+  "image": "cirrusci/flutter:latest",
+  "forwardPorts": [8080, 3000],
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code",
+        "GitHub.codespaces"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Dart-Code.dart-code"
+      }
+    }
+  },
+  "postCreateCommand": "flutter --version && flutter config --enable-web",
+  "remoteUser": "vscode"
+}
